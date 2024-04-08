@@ -6,5 +6,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { graphqlProvider } from './graphql/graphql.provider';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(), graphqlProvider]
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(),
+    graphqlProvider
+  ]
 };

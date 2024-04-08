@@ -1,33 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, output, EventEmitter, Output } from '@angular/core';
 import { GraphqlService } from '../../services/graphql.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  username: string ="";
-  password: string ="";
+  //@Output() login = new EventEmitter<{ username: string, password: string }>();
+  @Output() loginSuccess = new EventEmitter<void>();
+  username: string = '';
+  password: string = '';
 
-  constructor(private graphqlService: GraphqlService, private router: Router) { }
+  constructor(
+    private graphqlService: GraphqlService,
+    private router: Router) { }
 
   onLogin(): void {
-    // Use the properties bound to the input fields
     this.graphqlService.login(this.username, this.password).subscribe({
-      next: ({ data }) => {
+      next: ({ data }: { data: any }) => {
         console.log(data);
-        // You would typically navigate to another route on success
-        // this.router.navigate(['/home']);
+        //this.login.emit({ username: this.username, password: this.password });
+        this.loginSuccess.emit();
+        this.router.navigate(['/']);
+
       },
-      error: (error) => {
+      error: (error: any) => {
         console.error('Login failed:', error);
       }
     });
   }
-
 }
+
+
+

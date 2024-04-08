@@ -1,0 +1,107 @@
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .employee-table th {
+    background-color: #f7f7f7;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .employee-table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .employee-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .employee-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .employee-table button {
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .employee-table button:hover {
+    background-color: #ff3333;
+  }
+  
+  .add-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: black;
+  }
+  
+  .delete-btn,
+  .edit-btn {
+    padding: 6px 12px;
+    margin-right: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover,
+  .edit-btn:hover {
+    background-color: black;
+  }
+  
+  .navbar {
+    background-color: #d4d6d8; 
+    padding: 10px 20px; 
+    color: #000;
+  }
+  
+  .navbar-buttons {
+    display: flex; 
+  }
+  
+  .login-button,
+  .signup-button {
+    padding: 5px 10px;
+    margin-right: 10px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent; 
+    color: #000;
+  }
+  
+  .login-button:hover,
+  .signup-button:hover {
+    background-color: #ddd; 
+  }
+  
+  
+  
+  

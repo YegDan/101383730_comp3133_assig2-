@@ -1,0 +1,39 @@
+
+  <nav class="navbar">
+    <div *ngIf="!isLoggedIn" class="navbar-buttons">
+      <button class="login-button" (click)="goToLogin()">Login</button>
+      <button class="signup-button" (click)="goToSignUp()">Sign Up</button>
+    </div>
+  </nav>
+  
+  
+  
+  <div *ngIf="employees.length > 0; else noEmployees">
+    <h2>Employee List</h2>
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>
+            <button class="delete-btn" (click)="onDeleteEmployee(employee.id)">Delete</button>
+            <button class="edit-btn" (click)="onEditEmployee(employee)">Edit</button>
+            <button (click)="viewEmployeeDetails(employee)">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="add-btn" (click)="goToAddEmployee()">Add Employee</button>
+  </div>
+  
+  <ng-template #noEmployees>
+    <p>No employees found.</p>
+  </ng-template>
+  

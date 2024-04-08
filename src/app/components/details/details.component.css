@@ -1,0 +1,21 @@
+.employee-details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .employee-details h2 {
+    color: #333;
+  }
+  
+  .employee-details p {
+    margin: 5px 0;
+  }
+  
+  .employee-details strong {
+    font-weight: bold;
+  }
+  
+
+  
