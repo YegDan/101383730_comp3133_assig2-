@@ -3,7 +3,7 @@ import { HttpLink } from 'apollo-angular/http';
 import { ApplicationConfig, inject } from '@angular/core';
 import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
 
-const uri = 'http://localhost:4000/';
+const uri = 'https://101383730-comp-3133-assignment1.vercel.app/';
 export function apolloOptionsFactory(): ApolloClientOptions<any> {
   const httpLink = inject(HttpLink);
   return {
